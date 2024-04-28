@@ -1,11 +1,11 @@
-import random
+import secrets
 
 def display_title():
     print("Guess the number!")
     print()
 
 def play_game(LIMIT):    
-    number = random.randint(1, LIMIT)
+    number = secrets.SystemRandom().randint(1, LIMIT)
     print(f"I'm thinking of a number from 1 to {LIMIT}\n")
     count = 1
     guess = int(input("Your guess: "))
